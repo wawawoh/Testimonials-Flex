@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    
+
+--Purple-50: hsl(260, 100%, 95%);
+--Purple-300: hsl(264, 82%, 80%);
+--Purple-500: hsl(263, 55%, 52%);
+
+
+
+--White: hsl(0, 0%, 100%);
+--Grey-100: hsl(214, 17%, 92%);
+--Grey-200: hsl(0, 0%, 81%);
+--Grey-400: hsl(224, 10%, 45%);
+--Grey-500: hsl(217, 19%, 35%);
+--Dark-blue: hsl(219, 29%, 14%);
+--Black: hsl(0, 0%, 7%);
+}
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    background-color: blanchedalmond;
+    font-family: Barlow Semi Condensed ;
+    font-weight: 500;
+    min-height: 100vh;
+    color: var(--Grey-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 2em 0.4em;
+    font-size:13px;
+}
+section {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Purple-300);
+    margin: 20px;
+    border-radius: 1em;
+    padding: 1.6em;
+}
+.proffession {
+    display:flex;
+    flex-direction: column;
+    padding-left: 1.5em;
+    
+
+}
+.quote {
+    align-self: flex-start;
+    margin:0 0;
+    font-weight:600;
+    font-size: 20px;
+}
+.quote p {
+    margin-bottom: 0;
+}
+.name{
+    margin-bottom: -1em;
+    font-size: 14px;
+    
+}
+.profile {
+    display:flex ;
+    
+}
+img {
+    max-width: 4em;
+    max-height: 4em;
+    align-self: center;
+    border-radius: 50%;
+    border: 5px solid var(--Grey-400);
+    
+    
+}
+#dan{
+    grid-area:dan;
+    background-color: var(--Purple-500);
+}
+#jon{
+    grid-area:jon;
+    background-color: var(--Grey-400);
+}
+#kira {
+    grid-area:kira;
+    color: var(--Grey-400);
+    background-color: white;
+}
+#jean {
+    grid-area:jean;
+    color: var(--Grey-400);
+    background-color: white;
+}
+#pat {
+    background-color: var(--Dark-blue);
+    grid-area:pat;
+
+}
+
+
+
+@media screen AND (min-width:600px) {
+    main {
+       
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:    
+            "dan dan jon kira"
+            "jean pat pat kira"
+        
+        
+        ;
+    }
+    
+    .quote {
+        margin: 0.2em auto;
+
+    }
+    
+}
